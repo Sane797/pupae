@@ -1,0 +1,170 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    padding-top: 56px; /* Fix for sticky navbar */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Full-screen height */
+    background: url('images/pupae.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 20px;  /* Adjust top spacing */
+    left: 20px; /* Adjust left spacing */
+    /*background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+    /* padding: 10px 20px;*/
+    border-radius: 5px; 
+    color: rgb(0, 0, 0);
+}
+.overlay h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size: 2.5rem; /* Adjust size */
+    font-weight: 700;
+    color: rgb(0, 0, 0); /* Ensure visibility */
+}
+
+.overlay p {
+    font-family: 'Roboto', sans-serif; /* Simple, readable font */
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+.hero-text h1 {
+    font-size: 3em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+/* Gallery */
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-section {
+    background: #f8f9fa;
+    padding: 50px;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+}
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+/* Remove default margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure header/navbar starts from the top */
+header, .navbar {
+    margin: 0;
+    padding: 0;
+}
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #212529; /* Dark background */
+    padding: 15px 0;
+  }
+  
+  .navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffc107; /* Yellow hover effect */
+  }
+  
+  /* Optional: Sticky navbar on scroll */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Example content styling */
+  .title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+    color: #333;
+  }
+  

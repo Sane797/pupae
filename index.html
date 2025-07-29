@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pupae</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            transition: all 0.4s ease;
+            padding: 15px 30px;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+        }
+
+        .navbar.scrolled {
+            background-color: #ffffff !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.scrolled .nav-link,
+        .navbar.scrolled .navbar-brand {
+            color: #333 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('images/pupae.jpg') no-repeat center center/cover;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Text Below Hero Image */
+        .hero-text-below {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .hero-text-below h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px; /* Reduced size from 48px to 32px */
+            color: #333;
+        }
+
+        .gallery-img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            background-color: #222 !important;
+            transition: all 0.4s ease;
+        }
+
+        .footer.scrolled-footer {
+            background-color: #ffffff !important;
+            color: #333 !important;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">www.pupae.in</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pupaegraphers.html">Pupaegraphers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-text-below">
+        <h5>Capturing Childhood</h5>
+        <style>
+              .hero-text h1 {
+                    font-size: 3em;
+                    top: 20px;  /* Adjust top spacing */
+                    left: 20px;
+                  }
+        </style>
+        
+    </section>
+    <!-- Hero Section (Just the image) -->
+    <header id="home" class="hero"></header>
+
+    <!-- Text Below Hero Image -->
+   
+
+    <!-- Gallery Section 
+    <section id="gallery" class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4"><img src="images/pupae.jpg" class="img-fluid gallery-img" alt="Photo 1"></div>
+            <div class="col-md-4 mb-4"><img src="images/pupae.jpg" class="img-fluid gallery-img"
+                    alt="Photo 2"></div>
+            <div class="col-md-4 mb-4"><img src="images/pupae.jpg" class="img-fluid gallery-img" alt="Photo 3"></div>
+            <div class="col-md-4 mb-4"><img src="images/pupae.jpg" class="img-fluid gallery-img" alt="Photo 4"></div>
+            <div class="col-md-4 mb-4"><img src="images/pupae.jpg" class="img-fluid gallery-img" alt="Photo 5"></div>
+            <div class="col-md-4 mb-4"><img src="images/pupae.jpg" class="img-fluid gallery-img" alt="Photo 6"></div>
+        </div>
+    </section>
+         -->
+    <!-- About Section -->
+    <section id="about" class="about-section mt-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p>At Pupae, we craft ads that don’t just sell — they speak. From strategy to story, design to delivery, we help brands grow, connect, and stand out in a crowded world.</p>
+        </div>
+    </section>
+     <section id="mission" class="about-section mt-5">
+        <div class="container text-center">
+            <h2>Mission</h2>
+            <p>At Pupae, our mission is to breathe life into brands by crafting creative, high-impact advertising experiences that resonate with audiences and drive results. We believe in the power of transformation—from raw ideas to compelling campaigns.
+We are committed to:
+
+Understanding each brand’s unique voice and amplifying it across the right platforms.
+
+Merging creativity with data-driven strategy to deliver campaigns that not only look good, but perform.
+
+Nurturing long-term relationships with our clients by being collaborative, transparent, and fearless in our pursuit of excellence.
+
+Adapting and evolving with every trend, technology, and audience insight—just like our name, Pupae, symbolizes growth and metamorphosis.</p>
+        </div>
+    </section>
+     <section id="vision" class="about-section mt-5">
+        <div class="container text-center">
+            <h2>Vision</h2>
+            <p>Our vision is to become a global creative powerhouse, known for redefining how brands communicate and connect.
+We aim to:
+
+Set a new standard for bold and boundary-pushing advertising.
+
+Be the go-to agency for brands in transition—those who are ready to evolve, reinvent, and dominate their space.
+
+Build a culture where creativity, inclusivity, and innovation thrive.
+
+Inspire a new generation of marketers, designers, and storytellers to think beyond the brief.
+
+Leave a lasting mark on the industry by making advertising more human, meaningful, and unforgettable.</p>
+        </div>
+    </section>
+       
+    <!-- Contact Section
+    <section id="contact" class="container mt-5 mb-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+            <textarea class="form-control mb-3" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+      -->
+    <!-- Footer -->
+    <footer class="footer text-white text-center py-3" id="footer">
+        <p>pupae.in &copy; 2025  All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scroll Script -->
+    <script>
+        const navbar = document.getElementById("navbar");
+        const footer = document.getElementById("footer");
+
+        window.addEventListener("scroll", () => {
+            // Navbar scroll effect
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+
+            // Footer scroll effect when near bottom
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+                footer.classList.add("scrolled-footer");
+            } else {
+                footer.classList.remove("scrolled-footer");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
