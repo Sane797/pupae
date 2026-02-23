@@ -26,39 +26,34 @@
 
     .title {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 2.5rem;
       font-family: 'Playfair Display', serif;
-      color: #222;
+      color: #333;
     }
 
     /* Gallery Grid */
     .gallery-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      padding: 60px 20px;
-      max-width: 1300px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 50px 20px;
+      max-width: 1200px;
       margin: auto;
     }
 
     .gallery-item {
       position: relative;
-      border-radius: 18px;
+      border-radius: 12px;
       overflow: hidden;
+      aspect-ratio: 9 / 16;
       background: #000;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     }
 
     .gallery-video {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
     }
 
     .overlay {
@@ -66,7 +61,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
       color: white;
       padding: 15px;
       text-align: center;
@@ -77,12 +72,6 @@
 
     .gallery-item:hover .overlay {
       opacity: 1;
-    }
-
-    @media (max-width: 768px) {
-      .title {
-        font-size: 2rem;
-      }
     }
 
   </style>
@@ -102,9 +91,10 @@
   <!-- Gallery -->
   <div class="gallery-container">
 
-    <!-- Video 1 -->
+    <!-- Repeat This Block For Each Video -->
+
     <div class="gallery-item">
-      <video class="gallery-video" controls preload="metadata" playsinline poster="pupae.jpg">
+      <video class="gallery-video" controls preload="metadata" playsinline>
         <source src="video1.mp4" type="video/mp4">
       </video>
       <div class="overlay">
@@ -113,9 +103,8 @@
       </div>
     </div>
 
-    <!-- Video 2 -->
     <div class="gallery-item">
-      <video class="gallery-video" controls preload="metadata" playsinline poster="pupae.jpg">
+      <video class="gallery-video" controls preload="metadata" playsinline>
         <source src="video2.mp4" type="video/mp4">
       </video>
       <div class="overlay">
@@ -124,9 +113,8 @@
       </div>
     </div>
 
-    <!-- Video 3 -->
     <div class="gallery-item">
-      <video class="gallery-video" controls preload="metadata" playsinline poster="pupae.jpg">
+      <video class="gallery-video" controls preload="metadata" playsinline>
         <source src="video3.mp4" type="video/mp4">
       </video>
       <div class="overlay">
@@ -135,9 +123,8 @@
       </div>
     </div>
 
-    <!-- Video 4 -->
     <div class="gallery-item">
-      <video class="gallery-video" controls preload="metadata" playsinline poster="pupae.jpg">
+      <video class="gallery-video" controls preload="metadata" playsinline>
         <source src="video4.mp4" type="video/mp4">
       </video>
       <div class="overlay">
@@ -146,9 +133,8 @@
       </div>
     </div>
 
-    <!-- Video 5 -->
     <div class="gallery-item">
-      <video class="gallery-video" controls preload="metadata" playsinline poster="pupae.jpg">
+      <video class="gallery-video" controls preload="metadata" playsinline>
         <source src="video5.mp4" type="video/mp4">
       </video>
       <div class="overlay">
@@ -157,9 +143,61 @@
       </div>
     </div>
 
+    <div class="gallery-item">
+      <video class="gallery-video" controls preload="metadata" playsinline>
+        <source src="video6.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <h3>Art 06</h3>
+        <p>Kochi</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <video class="gallery-video" controls preload="metadata" playsinline>
+        <source src="video7.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <h3>Art 07</h3>
+        <p>Kochi</p>
+      </div>
+    </div>
+ <div class="gallery-item">
+      <video class="gallery-video" controls preload="metadata" playsinline>
+        <source src="video8.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <h3>Art 08</h3>
+        <p>Kochi</p>
+      </div>
+    </div><div class="gallery-item">
+      <video class="gallery-video" controls preload="metadata" playsinline>
+        <source src="video9.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <h3>Art 09</h3>
+        <p>Kochi</p>
+      </div>
+    </div><div class="gallery-item">
+      <video class="gallery-video" controls preload="metadata" playsinline>
+        <source src="video11.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <h3>Art 10</h3>
+        <p>Kochi</p>
+      </div>
+    </div><div class="gallery-item">
+      <video class="gallery-video" controls preload="metadata" playsinline>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <h3>Art 11</h3>
+        <p>Kochi</p>
+      </div>
+    </div>
   </div>
 
-  <!-- Auto Pause Other Videos -->
+  <!-- Auto Pause Other Videos Script -->
   <script>
     const videos = document.querySelectorAll(".gallery-video");
 
@@ -176,3 +214,6 @@
 
 </body>
 </html>
+
+
+
