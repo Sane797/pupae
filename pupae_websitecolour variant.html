@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pupae - The Creative Cavity | Premium Kids Essentials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #1B5E5E;
+            --primary-teal: #2D7A7A;
+            --primary-green: #4A9B9B;
+            --light-mint: #D0E8E8;
+            --light-mint-bg: #E8F4F4;
+            --white: #FFFFFF;
+            --cream: #F9F8F5;
+            --text-dark: #1B3C3C;
+            --text-muted: #4A6565;
+            --accent-gold: #D4A574;
+            --border-light: #C0D8D8;
+            --success: #5BA87B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--light-mint-bg);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .logo {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-teal);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-teal);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .cart-btn {
+            background: var(--primary-dark);
+            color: var(--white);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .cart-btn:hover {
+            background: var(--primary-teal);
+            transform: scale(1.05);
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        .icon-btn:hover {
+            color: var(--primary-teal);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            margin-top: 60px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, var(--light-mint-bg) 0%, rgba(208, 232, 232, 0.3) 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(208, 232, 232, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--white);
+            border: 2px solid var(--primary-teal);
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            width: fit-content;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .badge-icon {
+            font-size: 1.2rem;
+        }
+
+        .badge-text {
+            color: var(--primary-teal);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Lora', serif;
+            font-size: 3.8rem;
+            line-height: 1.15;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+            font-style: italic;
+        }
+
+        .hero-text p {
+            font-family: 'Merriweather', serif;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .btn-primary {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-teal);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(45, 122, 122, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-teal);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--primary-teal);
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-teal);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, var(--light-mint) 0%, var(--primary-green) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            color: rgba(255,255,255,0.2);
+            box-shadow: 0 30px 80px rgba(45, 122, 122, 0.2);
+            border: 4px solid var(--white);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+        }
+
+        .weekly-badge {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: var(--light-mint);
+            border: 2px solid var(--primary-teal);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            z-index: 20;
+        }
+
+        .weekly-badge-title {
+            font-size: 0.75rem;
+            color: var(--primary-teal);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .weekly-badge-text {
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-style: italic;
+        }
+
+        /* ===== HERO PRODUCTS SECTION ===== */
+        .hero-products {
+            padding: 6rem 2rem;
+            background: var(--white);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--light-mint-bg);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(45, 122, 122, 0.05);
+            transition: top 0.3s ease;
+            z-index: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(45, 122, 122, 0.15);
+            border-color: var(--primary-teal);
+        }
+
+        .product-card:hover::before {
+            top: 0;
+        }
+
+        .product-icon {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+
+        .product-card a {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-card a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            padding: 6rem 2rem;
+            background: var(--light-mint-bg);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-family: 'Merriweather', serif;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 2;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-mint) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: rgba(255,255,255,0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border: 4px solid var(--white);
+        }
+
+        /* ===== GROWTH GUIDE SECTION ===== */
+        .growth-guide {
+            padding: 6rem 2rem;
+            background: var(--white);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .video-card {
+            background: var(--light-mint-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(45, 122, 122, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid var(--border-light);
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(45, 122, 122, 0.15);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-mint) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .video-content {
+            padding: 2rem;
+        }
+
+        .video-content h4 {
+            font-family: 'Lora', serif;
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .video-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .watch-btn {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .watch-btn:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== BLOG SECTION ===== */
+        .blog-section {
+            padding: 6rem 2rem;
+            background: var(--light-mint-bg);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(45, 122, 122, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-light);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 18px 45px rgba(45, 122, 122, 0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-mint) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .blog-card-content {
+            padding: 2rem;
+        }
+
+        .blog-date {
+            color: var(--primary-teal);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .blog-card-content h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: var(--light-mint-bg);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 0 4px rgba(45, 122, 122, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .form-submit {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            background: var(--primary-teal);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(45, 122, 122, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-section h4 {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: var(--light-mint);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--light-mint);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .video-grid, .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">🦋</div>
+                <div class="logo">pupae</div>
+            </div>
+            <nav>
+                <a href="#products">Shop</a>
+                <a href="#products">Clothing</a>
+                <a href="#products">Feeding</a>
+                <a href="#products">Bedding</a>
+                <a href="#growth">Weekly Star</a>
+            </nav>
+            <div class="nav-icons">
+                <button class="cart-btn">🛒 Cart <span>0</span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-icon">🌿</span>
+                    <span class="badge-text">Organic · Safe · Made in India</span>
+                </div>
+                <h1>Where every baby begins to bloom</h1>
+                <p>Pupae is clothing for the first chapter — soft, safe, and full of wonder. Crafted for newborns and babies up to 3 years, from the heart of Wayanad.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary">Explore collection ↗</button>
+                    <button class="btn-secondary">Our story</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="weekly-badge">
+                    <div class="weekly-badge-title">⭐ WEEKLY STAR · APR 14-20, 2026</div>
+                    <div class="weekly-badge-text">Little Arya · Kochi</div>
+                </div>
+                <div class="hero-image-placeholder">👶</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO PRODUCTS SECTION -->
+    <section class="hero-products" id="products">
+        <h2 class="section-title">Our Collections</h2>
+        <p class="section-subtitle">Discover our carefully curated collections for every stage of your baby's growth</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">👕</div>
+                <h3>Clothing</h3>
+                <p>Soft, organic cotton wear designed for delicate skin. From bodysuits to sleepwear, every piece is crafted with love.</p>
+                <a href="#contact">Enquire Now →</a>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🛏️</div>
+                <h3>Bedding</h3>
+                <p>Premium, gentle bedding sets to create the coziest sleep environment for your little one.</p>
+                <a href="#contact">Enquire Now →</a>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🍽️</div>
+                <h3>Feeding</h3>
+                <p>Safe, food-grade essentials for mealtime. Designed for comfort and your baby's health.</p>
+                <a href="#contact">Enquire Now →</a>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">📦</div>
+                <h3>Delivery Set</h3>
+                <p>Complete care packages for new parents. Everything you need, thoughtfully assembled.</p>
+                <a href="#contact">Enquire Now →</a>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">💝</div>
+                <h3>Pre-Delivery</h3>
+                <p>Prepare for arrival with our carefully selected bundles. Pure essentials, pure joy.</p>
+                <a href="#contact">Enquire Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Born in the verdant valleys of Wayanad, Pupae carries the wisdom of nature and the warmth of human connection. We believe that every child deserves products created with intention—products that honor both the delicate skin of infants and the precious earth that sustains us.</p>
+                <p>Our name, Pupae, symbolizes transformation and growth. Like the gentle metamorphosis of a butterfly, we guide your child through every stage of their journey with products that feel like an embrace from nature itself.</p>
+                <p>Every thread, every fiber, every detail reflects our commitment: to create a legacy of care that extends from the crib to the community, from your home to the green hills of our homeland. Pupae isn't just a brand—it's a promise of purity, sustainability, and love.</p>
+            </div>
+            <div class="about-image-placeholder">🌿</div>
+        </div>
+    </section>
+
+    <!-- GROWTH GUIDE SECTION -->
+    <section class="growth-guide" id="growth">
+        <h2 class="section-title">Growth Guide</h2>
+        <p class="section-subtitle">Curated YouTube videos for parents navigating your baby's developmental milestones</p>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-placeholder">
+                  <img src="https://img.youtube.com/vi/L1ZOUwz3LbA/hqdefault.jpg" alt="">
+                </div>
+                <div class="video-content">
+                    <h4>First Months: Feeding & Comfort</h4>
+                    <p>Essential guidance for new parents on establishing routines and understanding your newborn's needs.</p>
+                    <a href="https://youtu.be/L1ZOUwz3LbA?si=DDHuXl3p1a2Rkgg5" target="_blank" class="watch-btn">Watch on YouTube →</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">
+                  <img src="https://img.youtube.com/vi/jeRfWLgLJxI/hqdefault.jpg" alt="">
+                </div>
+                <div class="video-content">
+                    <h4>Developmental Milestones (0-6 Months)</h4>
+                    <p>Track your baby's growth with expert insights on what to expect each month.</p>
+                    <a href="https://youtu.be/jeRfWLgLJxI" target="_blank" class="watch-btn">Watch on YouTube →</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">
+                  <img src="https://img.youtube.com/vi/AhzeS1rpoGA/hqdefault.jpg" alt="">
+                </div>
+                <div class="video-content">
+                    <h4>Sleep Patterns & Bedtime Routines</h4>
+                    <p>Learn how to create peaceful sleep environments and establish healthy sleep habits.</p>
+                    <a href="https://youtu.be/AhzeS1rpoGA" target="_blank" class="watch-btn">Watch on YouTube →</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">
+                  <img src="https://img.youtube.com/vi/UWgFWXHyiM8/hqdefault.jpg" alt="">
+                </div>
+                <div class="video-content">
+                    <h4>Skin Health & Natural Care</h4>
+                    <p>Understand your baby's delicate skin and why organic, natural products matter.</p>
+                    <a href="https://youtu.be/UWgFWXHyiM8" target="_blank" class="watch-btn">Watch on YouTube →</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">
+                  <img src="https://img.youtube.com/vi/eg6ZknMqnaY/hqdefault.jpg" alt="">
+                </div>
+                <div class="video-content">
+                    <h4>6-12 Months: Growth Spurts & Exploration</h4>
+                    <p>Navigate your baby's increased mobility and growing curiosity with confidence.</p>
+                    <a href="https://youtu.be/7zuqw1NY4CM" target="_blank" class="watch-btn">Watch on YouTube →</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">
+                  <img src="https://img.youtube.com/vi/L1ZOUwz3LbA/hqdefault.jpg" alt="">
+                </div>
+                <div class="video-content">
+                    <h4>Sustainable Parenting Practices</h4>
+                    <p>Build eco-conscious habits while caring for your family and our planet.</p>
+                    <a href="https://youtube.com" target="_blank" class="watch-btn">Watch on YouTube →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="blog-section" id="blog">
+        <h2 class="section-title">Parenting Guide</h2>
+        <p class="section-subtitle">Expert insights and loving wisdom for every stage of your parenting journey</p>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">📖</div>
+                <div class="blog-card-content">
+                    <div class="blog-date">APR 15, 2024</div>
+                    <h3>Choosing the Right Fabrics for Sensitive Skin</h3>
+                    <p>Explore why organic cotton and natural fibers are essential for your baby's delicate skin health.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">🌱</div>
+                <div class="blog-card-content">
+                    <div class="blog-date">APR 08, 2024</div>
+                    <h3>Sustainable Choices: Raising an Eco-Conscious Child</h3>
+                    <p>How small decisions in early childhood can nurture environmental awareness and responsibility.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">💤</div>
+                <div class="blog-card-content">
+                    <div class="blog-date">APR 01, 2024</div>
+                    <h3>Creating the Perfect Sleep Space for Newborns</h3>
+                    <p>From bedding to room temperature, discover all elements needed for safe, restful sleep.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have questions? We'd love to hear from you. Send us an enquiry and we'll respond within 24 hours.</p>
+        <div class="contact-container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="product">Interested In</label>
+                    <input type="text" id="product" name="product" placeholder="e.g., Clothing, Bedding, Delivery Set">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell us more about what you're looking for..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Enquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Pupae</h4>
+                <p>From Wayanad's heart, crafting sustainable, beautiful essentials for your baby with care and love.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#products">Collections</a>
+                <a href="#about">About Us</a>
+                <a href="#growth">Growth Guide</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+            </div>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns & Exchanges</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pupae - The Creative Cavity. All rights reserved. | Crafted with love from Wayanad, India</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your enquiry! We\'ll get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Simple animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.product-card, .blog-card, .video-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Cart counter animation
+        document.querySelector('.cart-btn').addEventListener('click', function() {
+            const counter = this.querySelector('span');
+            counter.textContent = parseInt(counter.textContent) + 1;
+        });
+    </script>
+</body>
+</html>
